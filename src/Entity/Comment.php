@@ -7,26 +7,19 @@ use Core\AbstractEntity;
 class Comment extends AbstractEntity
 {
     protected $id;
-    protected $articleId;
+    protected $user_id;
+    protected $project_id;
     protected $pseudo='';
     protected $comment = '';
-    protected $dateCreated = '';
-    protected $dateUpdated = '';
-    protected $isValidated = false;
+    protected $date_created = '';
+    protected $date_updated = '';
+    protected $is_validated = false;
 
-    /**
-     * @return mixed
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @param mixed $id
-     *
-     * @return self
-     */
     public function setId(int $id)
     {
         $this->id = $id;
@@ -34,39 +27,35 @@ class Comment extends AbstractEntity
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getArticleId(): int
+    public function getUserId(): int
     {
-        return $this->articleId;
+        return $this->userId;
     }
 
-    /**
-     * @param mixed $articleId
-     *
-     * @return self
-     */
-    public function setArticleId(int $articleId)
+    public function setUserId(int $userId)
     {
-        $this->articleId = $articleId;
+        $this->userId = $userId;
 
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
+    public function getProjectId(): int
+    {
+        return $this->projectId;
+    }
+
+    public function setProjectId(int $projectId)
+    {
+        $this->projectId = $projectId;
+
+        return $this;
+    }
+
     public function getPseudo(): string
     {
         return $this->pseudo;
     }
 
-    /**
-     * @param mixed $pseudo
-     *
-     * @return self
-     */
     public function setPseudo(string $pseudo)
     {
         $this->pseudo = $pseudo;
@@ -74,19 +63,11 @@ class Comment extends AbstractEntity
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
     public function getComment(): string
     {
         return $this->comment;
     }
 
-    /**
-     * @param mixed $comment
-     *
-     * @return self
-     */
     public function setComment(string $comment)
     {
         $this->comment = $comment;
@@ -94,19 +75,11 @@ class Comment extends AbstractEntity
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
     public function getDateCreated(): string
     {
         return $this->dateCreated;
     }
 
-    /**
-     * @param mixed $dateCreated
-     *
-     * @return self
-     */
     public function setDateCreated(string $dateCreated)
     {
         $this->dateCreated = $dateCreated;
@@ -114,19 +87,11 @@ class Comment extends AbstractEntity
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
     public function getDateUpdated(): string
     {
         return $this->dateUpdated;
     }
 
-    /**
-     * @param mixed $dateCreated
-     *
-     * @return self
-     */
     public function setDateUpdated(string $dateUpdated)
     {
         $this->dateUpdated = $dateUpdated;
@@ -134,20 +99,12 @@ class Comment extends AbstractEntity
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getIsValidated()
+    public function getIsValidated(): bool
     {
         return $this->isValidated;
     }
 
-    /**
-     * @param mixed $isValidated
-     *
-     * @return self
-     */
-    public function setIsValidated($isValidated)
+    public function setIsValidated(bool $isValidated)
     {
         $this->isValidated = $isValidated;
 
