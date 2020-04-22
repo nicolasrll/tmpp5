@@ -7,22 +7,14 @@ use Core\AbstractEntity;
 class User extends AbstractEntity
 {
     protected $id;
-    protected $pseudo;
-    protected $password; // string
+    protected $login = '';
+    protected $password = ''; // string
 
-    /**
-     * @return mixed
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @param mixed $id
-     *
-     * @return self
-     */
     public function setId(int $id)
     {
         $this->id = $id;
@@ -30,42 +22,26 @@ class User extends AbstractEntity
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
+    public function getLogin(): string
+    {
+        return $this->login;
+    }
+
+    public function setLogin(string $login)
+    {
+        $this->login = $login;
+
+        return $this;
+    }
+
     public function getPassword(): string
     {
         return $this->password;
     }
 
-    /**
-     * @param mixed $password
-     *
-     * @return self
-     */
     public function setPassword(string $password)
     {
         $this->password = $password;
-
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPseudo(): string
-    {
-        return $this->pseudo;
-    }
-
-    /**
-     * @param mixed $pseudo
-     *
-     * @return self
-     */
-    public function setPseudo(string $pseudo)
-    {
-        $this->pseudo = $pseudo;
 
         return $this;
     }

@@ -29,24 +29,24 @@ class Comment extends AbstractEntity
 
     public function getUserId(): int
     {
-        return $this->userId;
+        return $this->user_id;
     }
 
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->user_id = $userId;
 
         return $this;
     }
 
     public function getProjectId(): int
     {
-        return $this->projectId;
+        return $this->project_id;
     }
 
     public function setProjectId(int $projectId)
     {
-        $this->projectId = $projectId;
+        $this->project_id = $projectId;
 
         return $this;
     }
@@ -77,36 +77,36 @@ class Comment extends AbstractEntity
 
     public function getDateCreated(): string
     {
-        return $this->dateCreated;
+        return $this->date_created;
     }
 
     public function setDateCreated(string $dateCreated)
     {
-        $this->dateCreated = $dateCreated;
+        $this->date_created = $dateCreated;
 
         return $this;
     }
 
     public function getDateUpdated(): string
     {
-        return $this->dateUpdated;
+        return $this->date_updated;
     }
 
     public function setDateUpdated(string $dateUpdated)
     {
-        $this->dateUpdated = $dateUpdated;
+        $this->date_updated = $dateUpdated;
 
         return $this;
     }
 
     public function getIsValidated(): bool
     {
-        return $this->isValidated;
+        return $this->is_validated;
     }
 
     public function setIsValidated(bool $isValidated)
     {
-        $this->isValidated = $isValidated;
+        $this->is_validated = $isValidated;
 
         return $this;
     }
