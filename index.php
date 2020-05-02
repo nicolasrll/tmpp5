@@ -1,10 +1,10 @@
 <?php
 
-require 'vendor/autoload.php';
-
 use Core\Request;
 use Core\Router;
 use Core\Dispatcher;
+
+require 'vendor/autoload.php';
 
 try{
     $dispatcher = new Dispatcher();
